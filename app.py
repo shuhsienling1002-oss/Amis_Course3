@@ -98,7 +98,8 @@ if 'current_q' not in st.session_state:
 
 # --- 3. 學習模式 (Learning Mode) ---
 def show_learning_mode():
-    st.markdown("<h2 style='text-align: center;'>Sakatoolo: O loma' no mako</h2>", unsafe_allow_html=True)
+    # 修正標題拼寫：Sakatolo
+    st.markdown("<h2 style='text-align: center;'>Sakatolo: O loma' no mako</h2>", unsafe_allow_html=True)
     st.markdown("<h4 style='text-align: center; color: gray;'>我的家庭 🏠</h4>", unsafe_allow_html=True)
     
     # 顯示單字卡
@@ -143,7 +144,8 @@ def show_learning_mode():
 
 # --- 4. 測驗模式 (Quiz Mode) ---
 def show_quiz_mode():
-    st.markdown("<h2 style='text-align: center;'>🎮 家庭小偵探</h2>", unsafe_allow_html=True)
+    # 修正標題拼寫：Sakatolo
+    st.markdown("<h2 style='text-align: center;'>🎮 Sakatolo 家庭小偵探</h2>", unsafe_allow_html=True)
     progress = st.progress(st.session_state.current_q / 3)
     
     # 第一關：單字聽力
@@ -187,7 +189,7 @@ def show_quiz_mode():
     elif st.session_state.current_q == 2:
         st.markdown("### 第三關：看圖回答")
         st.markdown("#### Q: Cima ko mafoti'ay? (誰在睡覺？)")
-        play_audio("Cima ko mafoti'ay?", filename_base="u3_q_who_sleeps") # 模擬問句
+        play_audio("Cima ko mafoti'ay?", filename_base="u3_q_who_sleeps") 
         
         st.markdown("<div style='font-size:80px; text-align:center;'>👴💤</div>", unsafe_allow_html=True)
         
